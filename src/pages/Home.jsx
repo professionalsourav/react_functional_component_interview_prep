@@ -3,7 +3,7 @@ import style from "../Styling/Home.module.css";
 
 const Home = () => {
   return (
-    <div className={style.main}>Home</div>
+    <div className={style.main}>Landing Page</div>
   )
 }
 
