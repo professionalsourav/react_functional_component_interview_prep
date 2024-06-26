@@ -1,0 +1,22 @@
+.main{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1%;
+    background-color: rgb(92, 10, 10);
+    color: white;
+}
+
+.center{
+position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn{
+    margin-left: auto;
+    background: none;
+    border: none;
+    
+}

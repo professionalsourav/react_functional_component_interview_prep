@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import { useState } from "react";
+import { BrowserRouter,Routes,Route ,Router, Link} from "react-router-dom";
+import Chap1 from "./pages/Hoc";
+import Product from "./pages/Product";
+import ProductHome from "./pages/ProdctHome";
+import Home from "./pages/Home";
+import Search from "./pages/Search";
+import List from "./pages/List";
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <nav
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            height: "10vh",
+            background: "lightblue",
+          }}
+        >
+          <Link
+            to="/product/producthome"
+            style={{ textDecoration: "none", color: "black", margin: "1rem" }}
+          >
+           home
+          </Link>
+          <Link
+            to="/product/search"
+            style={{ textDecoration: "none", color: "black", margin: "1rem" }}
+          >
+            search
+          </Link>
+          <Link
+            to="/product/list"
+            style={{ textDecoration: "none", color: "black", margin: "1rem" }}
+          >
+            list
+          </Link>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/higher_order_component" element={<Chap1 />} />
+          <Route path="product" element={<Product />}>
+            <Route path="producthome" element={<ProductHome />} />
+            <Route path="search" element={<Search />} />
+            <Route path="list" element={<List/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
