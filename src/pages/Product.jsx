@@ -11,7 +11,7 @@ const Product = () => {
        
         <button className={product.btn}>
           <Link style={{ textDecoration: "none" ,color:"white"}} to="/">
-            Back to Landing{" "}
+            Back to Landing
           </Link>
         </button>
       </div>
