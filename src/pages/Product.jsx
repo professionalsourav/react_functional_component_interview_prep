@@ -5,6 +5,7 @@ import product from "../Styling/Product.module.css"
 const Product = () => {
   return (
     <div>
+        
       <div className={product.main}>
       
         <div className={product.center}>product info</div>
