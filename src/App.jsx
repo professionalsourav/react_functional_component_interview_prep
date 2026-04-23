@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Router, Link } from "react-router-dom";
 // import Home from "./pages/Home";
 // import Search from "./pages/Search";
 import Loading from "./component/Loading";
+import ArrayDisplay from "./pages/ArrayDisplay";
 const Search = React.lazy(() => import("./pages/Search"));
 const ListLazy = React.lazy(() => import("./pages/List"));
 const Home = React.lazy(() => import("./pages/Home"));
@@ -73,6 +74,7 @@ function App() {
               }
             />
           </Route>
+          <Route path="/arrayDisplay" element={<ArrayDisplay/>}/>
         </Routes>
       </BrowserRouter>
     </>
